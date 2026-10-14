@@ -1,0 +1,77 @@
+/* CHAVSV visual layer. Other selectable themes remain available. */
+html[data-theme="chavsv-glass"] { --radius: 12px; }
+html[data-theme="chavsv-glass"] body {
+  background: radial-gradient(ellipse at 90% 0%, #52152744, transparent 48%), #09090c;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+.chavsv-wordmark { letter-spacing: .2em; font-weight: 800 !important; color: #fff; }
+.chavsv-product { font-size: 9px; letter-spacing: .16em; color: var(--muted); margin-left: 12px; }
+html[data-theme="chavsv-glass"] .titlebar { background: linear-gradient(110deg,#1b111ad9,#0e0e14f5 65%); border-bottom: 1px solid #ef45592d; }
+html[data-theme="chavsv-glass"] .rail { background: linear-gradient(160deg,#1d121aaa,#101015f2); border-right: 1px solid #ffffff0b; }
+html[data-theme="chavsv-glass"] :is(.btn,.btn-setup,.rail-btn,.win-btn) {
+  border: 1px solid #ffffff1c;
+  background: linear-gradient(160deg,#ffffff12,#ffffff04 62%), #19161fb3;
+  color: #f7eef5;
+  box-shadow: inset 0 1px 0 #ffffff13, 0 3px 10px #00000020;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+html[data-theme="chavsv-glass"] :is(.btn,.btn-setup,.rail-btn,.win-btn):hover:not(:disabled) {
+  border-color: #ff839370;
+  background: linear-gradient(150deg,#ff809229,#ffffff08), #261620dc;
+  box-shadow: inset 0 1px 0 #ffffff22, 0 3px 14px #d42a3b13;
+}
+html[data-theme="chavsv-glass"] :is(.btn-primary,.btn-setup-primary,.btn-setup-finish,.rail-btn.active) {
+  border-color: #ff8a9870;
+  background: linear-gradient(150deg,#ff6e7f66,#9c173688), #b0233ba8;
+  color: #fff;
+  box-shadow: inset 0 1px 0 #ffc1c540, 0 4px 16px #ec294125;
+}
+html[data-theme="chavsv-glass"] :is(.btn-primary,.btn-setup-primary,.btn-setup-finish,.rail-btn.active):hover:not(:disabled) {
+  background: linear-gradient(150deg,#ff829088,#b0233bcc), #bd2d42;
+}
+html[data-theme="chavsv-glass"] .btn-danger { color: #ff9aa8; }
+html[data-theme="chavsv-glass"] :is(.btn,.rail-btn,.btn-setup):disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+html[data-theme="chavsv-glass"] :is(button,input,select,textarea):focus-visible { outline: 2px solid #ff8a98; outline-offset: 3px; }
+html[data-theme="chavsv-glass"] :is(.modal-content,.settings-card,.setup-card) {
+  background: linear-gradient(145deg,#211923ee,#141218f7);
+  border-color: #ffffff19; box-shadow: inset 0 1px 0 #ffffff0b,0 20px 70px #0007;
+}
+html[data-theme="chavsv-glass"] .setup-wrapper { background: radial-gradient(ellipse at 75% 10%,#b92e4029,transparent 55%),#09090c; }
+html[data-theme="chavsv-glass"] :is(input,textarea,select) { accent-color: #f04459; }
+.chavsv-auth.unlock-overlay {
+  background: radial-gradient(ellipse at 18% 20%,#821d323e,transparent 45%), radial-gradient(ellipse at 90% 85%,#b92b3329,transparent 48%),#09090cf5;
+  backdrop-filter: blur(20px); padding: 32px; overflow-y: auto;
+}
+.chavsv-auth .unlock-card {
+  position: relative; max-width: 470px; padding: 42px;
+  border: 1px solid #f896a22b; border-radius: 24px;
+  background: linear-gradient(145deg,#302029b8,#16131bd9 46%,#141218ef);
+  box-shadow: inset 0 1px 0 #ffe5ee18,0 32px 100px #0009,0 0 70px #b3273410;
+  backdrop-filter: blur(24px); align-items: stretch; text-align: left;
+}
+.chavsv-lock-brand { display: flex; align-items: center; gap: 14px; color: #fff; font-size: 25px; font-weight: 800; letter-spacing: .18em; margin-bottom: 36px; }
+.chavsv-lock-brand img { width: 52px; height: 52px; }
+.chavsv-lock-brand small { display: block; font-size: 9px; font-weight: 500; color: #b8a7b3; letter-spacing: .19em; margin-top: 5px; }
+.chavsv-secure-tag { font-size: 9px; font-weight: 650; letter-spacing: .1em; color: #ff9ba8; margin-bottom: 16px; }
+.chavsv-auth .unlock-title { font-size: 26px; letter-spacing: -.035em; line-height: 1.2; margin: 0 0 12px; color: #faf7fa; }
+.chavsv-auth .unlock-desc { font-size: 13px; line-height: 1.65; color: #b9acba; margin: 0 0 28px; }
+.chavsv-auth .unlock-form { gap: 0; }
+.chavsv-auth .chavsv-password-label { color: #e8dce6; font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+.chavsv-auth .unlock-input-wrap input { height: 50px; padding-right: 48px; font-size: 14px; background: #0b090ec9; }
+.chavsv-auth .unlock-eye-btn { right: 10px; height: 32px; width: 32px; border-radius: 8px; color: #cab8c7; background: transparent; border: 0; box-shadow: none; }
+.chavsv-auth .unlock-eye-btn:hover { color: #fff; background: #ffffff0c; }
+.chavsv-auth .unlock-error { min-height: 0; font-size: 12px; line-height: 1.5; color: #ffa0ad; margin-top: 10px; }
+.chavsv-auth .unlock-error:empty { margin-top: 0; }
+.chavsv-caps { min-height: 18px; margin-top: 7px; font-size: 11px; color: #ffd098; }
+.chavsv-auth .unlock-btn { height: 48px; margin-top: 16px; border-radius: 12px; font-size: 14px; font-weight: 600; }
+.chavsv-auth .chavsv-lock-note { border-top: 1px solid #ffffff0d; margin: 26px 0 0; padding-top: 20px; color: #a995a4; font-size: 11px; line-height: 1.65; }
+.chavsv-auth input[aria-invalid="true"] { border-color: #ff7187; }
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="chavsv-glass"] *, .chavsv-auth * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 520px) {
+  .chavsv-auth.unlock-overlay { padding: 16px; }
+  .chavsv-auth .unlock-card { padding: 28px; }
+}

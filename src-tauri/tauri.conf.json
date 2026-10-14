@@ -1,0 +1,139 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "CHAVSV Account Manager",
+    "version": "3.0.0-pre.2"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "dialog": {
+        "all": true,
+        "open": true
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": [
+          "http://localhost:5050/*",
+          "http://127.0.0.1:5050/*"
+        ]
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true,
+        "setAlwaysOnTop": true,
+        "setIcon": true
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "exists": true,
+        "scope": [
+          "FRAMdata/*"
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": [
+        "nsis"
+      ],
+      "identifier": "com.chavsv.accountmanager",
+      "shortDescription": "CHAVSV Account Manager",
+      "longDescription": "CHAVSV Account Manager, personaliza\u00e7\u00e3o do Forked Roblox Account Manager.",
+      "category": "Utility",
+      "copyright": "Copyright \u00a9 2026 hackyue",
+      "publisher": "CHAVSV",
+      "resources": [
+        "resources/backend.exe",
+        "../backend/app.py",
+        "../backend/requirements.txt",
+        "../backend/classes/*.py",
+        "../backend/utils/*.py"
+      ],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.ico",
+        "icons/icon.icns",
+        "icons/Square30x30Logo.png",
+        "icons/Square44x44Logo.png",
+        "icons/Square71x71Logo.png",
+        "icons/Square89x89Logo.png",
+        "icons/Square107x107Logo.png",
+        "icons/Square142x142Logo.png",
+        "icons/Square150x150Logo.png",
+        "icons/Square284x284Logo.png",
+        "icons/Square310x310Logo.png",
+        "icons/StoreLogo.png"
+      ],
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "wix": {
+          "language": "en-US"
+        },
+        "nsis": {
+          "installerIcon": "icons/icon.ico",
+          "headerImage": null,
+          "sidebarImage": null,
+          "installMode": "both",
+          "languages": [
+            "English"
+          ]
+        }
+      }
+    },
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.rbxcdn.com https://*.roblox.com https://tr.rbxcdn.com https://thumbnails.roblox.com https://avatars.githubusercontent.com https://*.githubusercontent.com https://github.com http://127.0.0.1:5050; connect-src 'self' http://127.0.0.1:5050 https://*.roblox.com https://*.rbxcdn.com https://api.github.com https://github.com https://raw.githubusercontent.com; font-src 'self' data:"
+    },
+    "updater": {
+      "active": false
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.ico",
+      "iconAsTemplate": true
+    },
+    "windows": [
+      {
+        "label": "main",
+        "title": "CHAVSV Account Manager",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "transparent": false,
+        "minWidth": 1100,
+        "minHeight": 700,
+        "fileDropEnabled": false,
+        "additionalBrowserArgs": "--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection,DownloadBubble,EdgeDefaultShare"
+      }
+    ]
+  }
+}

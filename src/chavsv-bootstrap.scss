@@ -1,0 +1,28 @@
+// Bootstrap is scoped to authentication, preserving upstream application layout.
+@import "bootstrap/scss/functions";
+$primary: #d92e48;
+$body-bg: #111115;
+$body-color: #faf7fa;
+$border-color: #48313c;
+$input-bg: #0d0c11;
+$input-color: #faf7fa;
+$input-placeholder-color: #aba1af;
+$input-focus-border-color: #f04459;
+$input-border-radius: 0.75rem;
+$input-border-radius-lg: 0.75rem;
+$enable-dark-mode: false;
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+.chavsv-auth {
+  --bs-body-bg: #111115;
+  --bs-body-color: #faf7fa;
+  --bs-border-width: 1px;
+  --bs-border-color: #48313c;
+  --bs-border-radius: .75rem;
+  --bs-border-radius-lg: .75rem;
+  --bs-secondary-color: #aba1af;
+  @import "bootstrap/scss/forms/labels";
+  @import "bootstrap/scss/forms/form-control";
+  @import "bootstrap/scss/buttons";
+}
